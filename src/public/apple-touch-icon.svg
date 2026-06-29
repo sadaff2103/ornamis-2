@@ -1,0 +1,149 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark Background with rounded corners for iOS -->
+  <rect width="180" height="180" rx="40" fill="#2c1810"/>
+  
+  <!-- Subtle radial gradient overlay -->
+  <rect width="180" height="180" rx="40" fill="url(#bgGradient180)" opacity="0.4"/>
+  
+  <defs>
+    <radialGradient id="bgGradient180">
+      <stop offset="0%" stop-color="#492f0e" />
+      <stop offset="100%" stop-color="#1a0f08" />
+    </radialGradient>
+    
+    <!-- Premium Gold Metallic Gradient -->
+    <linearGradient id="gold180" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f9d77e" />
+      <stop offset="25%" stop-color="#d4af37" />
+      <stop offset="50%" stop-color="#f4e4c1" />
+      <stop offset="75%" stop-color="#c9a961" />
+      <stop offset="100%" stop-color="#8b6914" />
+    </linearGradient>
+
+    <!-- Deep Gold for Shadows -->
+    <linearGradient id="deep180" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c9a961" />
+      <stop offset="50%" stop-color="#8b6914" />
+      <stop offset="100%" stop-color="#6b4e0e" />
+    </linearGradient>
+
+    <!-- Bright Highlight -->
+    <linearGradient id="highlight180" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff9e6" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#f9d77e" stop-opacity="0.5" />
+    </linearGradient>
+
+    <!-- Premium Glow Filter -->
+    <filter id="glow180">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Drop Shadow -->
+    <filter id="shadow180">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.5"/>
+      <feOffset dx="0" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.4"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Main Symbol - Centered and Large -->
+  <g transform="translate(90, 90)" filter="url(#shadow180)">
+    
+    <!-- Central Diamond Jewel - Premium Size -->
+    <path
+      d="M 0 -42 L 30 0 L 0 42 L -30 0 Z"
+      fill="url(#gold180)"
+      stroke="url(#deep180)"
+      stroke-width="2"
+      filter="url(#glow180)"
+    />
+    
+    <!-- Diamond Facets for 3D Depth -->
+    <path d="M 0 -42 L 18 0 L 0 0 Z" fill="url(#highlight180)" opacity="0.75" />
+    <path d="M 0 -42 L -18 0 L 0 0 Z" fill="url(#deep180)" opacity="0.35" />
+    <path d="M 0 42 L 18 0 L 0 0 Z" fill="url(#deep180)" opacity="0.45" />
+    <path d="M 0 42 L -18 0 L 0 0 Z" fill="url(#deep180)" opacity="0.55" />
+    
+    <!-- Inner Facets -->
+    <path d="M -8 0 L 0 -20 L 8 0 L 0 20 Z" fill="url(#highlight180)" opacity="0.2" />
+
+    <!-- Left Wing - Elegant Geometric -->
+    <g filter="url(#glow180)">
+      <path
+        d="M -30 0 Q -48 -12, -56 -6 Q -54 4, -30 5 Z"
+        fill="url(#gold180)"
+        stroke="url(#deep180)"
+        stroke-width="1.5"
+      />
+      <path
+        d="M -30 2 Q -42 -8, -50 -4 Q -48 2, -30 3 Z"
+        fill="url(#highlight180)"
+        opacity="0.6"
+      />
+      <!-- Wing detail lines -->
+      <path d="M -38 -4 L -42 -5 M -40 0 L -45 -1 M -38 4 L -42 3" 
+            stroke="url(#deep180)" 
+            stroke-width="0.8" 
+            opacity="0.5" 
+            stroke-linecap="round"/>
+    </g>
+
+    <!-- Right Wing - Elegant Geometric -->
+    <g filter="url(#glow180)">
+      <path
+        d="M 30 0 Q 48 -12, 56 -6 Q 54 4, 30 5 Z"
+        fill="url(#gold180)"
+        stroke="url(#deep180)"
+        stroke-width="1.5"
+      />
+      <path
+        d="M 30 2 Q 42 -8, 50 -4 Q 48 2, 30 3 Z"
+        fill="url(#highlight180)"
+        opacity="0.6"
+      />
+      <!-- Wing detail lines -->
+      <path d="M 38 -4 L 42 -5 M 40 0 L 45 -1 M 38 4 L 42 3" 
+            stroke="url(#deep180)" 
+            stroke-width="0.8" 
+            opacity="0.5" 
+            stroke-linecap="round"/>
+    </g>
+
+    <!-- Top Crown Element - Prominent -->
+    <circle cx="0" cy="-48" r="4" fill="url(#gold180)" filter="url(#glow180)" />
+    <path d="M -3 -50 L 0 -56 L 3 -50" 
+          stroke="url(#gold180)" 
+          stroke-width="1.5" 
+          fill="none" 
+          stroke-linecap="round"/>
+    
+    <!-- Sparkle Accents - Premium Placement -->
+    <circle cx="-20" cy="-26" r="2.5" fill="url(#highlight180)" opacity="0.95" />
+    <circle cx="20" cy="-26" r="2.5" fill="url(#highlight180)" opacity="0.95" />
+    <circle cx="-24" cy="-6" r="1.8" fill="url(#highlight180)" opacity="0.85" />
+    <circle cx="24" cy="-6" r="1.8" fill="url(#highlight180)" opacity="0.85" />
+    
+    <!-- Bottom Geometric Accent - Elegant -->
+    <path d="M -14 42 L 0 50 L 14 42" 
+          stroke="url(#gold180)" 
+          stroke-width="2" 
+          fill="none" 
+          stroke-linecap="round"
+          filter="url(#glow180)"/>
+    <circle cx="0" cy="50" r="3" fill="url(#gold180)" filter="url(#glow180)"/>
+    
+    <!-- Corner accent sparkles -->
+    <circle cx="-28" cy="18" r="1.2" fill="url(#highlight180)" opacity="0.7" />
+    <circle cx="28" cy="18" r="1.2" fill="url(#highlight180)" opacity="0.7" />
+  </g>
+</svg>

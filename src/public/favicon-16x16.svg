@@ -1,0 +1,23 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark Background -->
+  <rect width="16" height="16" rx="3" fill="#2c1810"/>
+  
+  <defs>
+    <linearGradient id="gold16" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f9d77e" />
+      <stop offset="50%" stop-color="#d4af37" />
+      <stop offset="100%" stop-color="#c9a961" />
+    </linearGradient>
+  </defs>
+
+  <!-- Ultra-Simplified Symbol for 16px -->
+  <g transform="translate(8, 8)">
+    <!-- Central Diamond -->
+    <path d="M 0 -4 L 3 0 L 0 4 L -3 0 Z" fill="url(#gold16)" stroke="#8b6914" stroke-width="0.3"/>
+    <!-- Simplified Wings -->
+    <path d="M -3 0 L -6 -1 L -5 1 Z" fill="url(#gold16)"/>
+    <path d="M 3 0 L 6 -1 L 5 1 Z" fill="url(#gold16)"/>
+    <!-- Top accent -->
+    <circle cx="0" cy="-5" r="0.5" fill="#f9d77e"/>
+  </g>
+</svg>

@@ -1,0 +1,90 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark Background Circle -->
+  <circle cx="64" cy="64" r="64" fill="#2c1810"/>
+  
+  <defs>
+    <!-- Gold Metallic Gradient -->
+    <linearGradient id="faviconGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f9d77e" />
+      <stop offset="30%" stop-color="#d4af37" />
+      <stop offset="60%" stop-color="#f4e4c1" />
+      <stop offset="100%" stop-color="#c9a961" />
+    </linearGradient>
+
+    <!-- Deep Gold for Shadows -->
+    <linearGradient id="faviconDeep" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c9a961" />
+      <stop offset="50%" stop-color="#8b6914" />
+      <stop offset="100%" stop-color="#6b4e0e" />
+    </linearGradient>
+
+    <!-- Highlight -->
+    <linearGradient id="faviconHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff9e6" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#f9d77e" stop-opacity="0.4" />
+    </linearGradient>
+
+    <!-- Soft Glow Filter -->
+    <filter id="faviconGlow">
+      <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Main Symbol Group - Centered -->
+  <g transform="translate(64, 64)" filter="url(#faviconGlow)">
+    
+    <!-- Central Diamond Jewel - Larger and Bolder -->
+    <path
+      d="M 0 -28 L 20 0 L 0 28 L -20 0 Z"
+      fill="url(#faviconGold)"
+      stroke="url(#faviconDeep)"
+      stroke-width="1.5"
+    />
+    
+    <!-- Diamond Facets for 3D Depth -->
+    <path d="M 0 -28 L 12 0 L 0 0 Z" fill="url(#faviconHighlight)" opacity="0.7" />
+    <path d="M 0 -28 L -12 0 L 0 0 Z" fill="url(#faviconDeep)" opacity="0.4" />
+    <path d="M 0 28 L 12 0 L 0 0 Z" fill="url(#faviconDeep)" opacity="0.5" />
+    <path d="M 0 28 L -12 0 L 0 0 Z" fill="url(#faviconDeep)" opacity="0.6" />
+
+    <!-- Left Wing - Simplified Geometric -->
+    <path
+      d="M -20 0 Q -32 -8, -38 -4 Q -36 2, -20 3 Z"
+      fill="url(#faviconGold)"
+      stroke="url(#faviconDeep)"
+      stroke-width="1"
+    />
+    <path
+      d="M -20 1 Q -28 -5, -34 -3 Q -32 1, -20 2 Z"
+      fill="url(#faviconHighlight)"
+      opacity="0.5"
+    />
+
+    <!-- Right Wing - Simplified Geometric -->
+    <path
+      d="M 20 0 Q 32 -8, 38 -4 Q 36 2, 20 3 Z"
+      fill="url(#faviconGold)"
+      stroke="url(#faviconDeep)"
+      stroke-width="1"
+    />
+    <path
+      d="M 20 1 Q 28 -5, 34 -3 Q 32 1, 20 2 Z"
+      fill="url(#faviconHighlight)"
+      opacity="0.5"
+    />
+
+    <!-- Top Crown Accent -->
+    <circle cx="0" cy="-32" r="3" fill="url(#faviconGold)" />
+    
+    <!-- Sparkle Accents - Simplified -->
+    <circle cx="-14" cy="-16" r="2" fill="url(#faviconHighlight)" opacity="0.9" />
+    <circle cx="14" cy="-16" r="2" fill="url(#faviconHighlight)" opacity="0.9" />
+    
+    <!-- Bottom Accent -->
+    <circle cx="0" cy="32" r="2.5" fill="url(#faviconGold)" />
+  </g>
+</svg>

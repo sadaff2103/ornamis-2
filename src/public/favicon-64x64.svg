@@ -1,0 +1,92 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark Background with subtle gradient -->
+  <circle cx="32" cy="32" r="32" fill="#2c1810"/>
+  <circle cx="32" cy="32" r="32" fill="url(#bgGradient64)" opacity="0.3"/>
+  
+  <defs>
+    <radialGradient id="bgGradient64">
+      <stop offset="0%" stop-color="#492f0e" />
+      <stop offset="100%" stop-color="#2c1810" />
+    </radialGradient>
+    
+    <linearGradient id="gold64" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f9d77e" />
+      <stop offset="30%" stop-color="#d4af37" />
+      <stop offset="60%" stop-color="#f4e4c1" />
+      <stop offset="100%" stop-color="#c9a961" />
+    </linearGradient>
+
+    <linearGradient id="deep64" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c9a961" />
+      <stop offset="50%" stop-color="#8b6914" />
+      <stop offset="100%" stop-color="#6b4e0e" />
+    </linearGradient>
+
+    <linearGradient id="highlight64" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff9e6" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#f9d77e" stop-opacity="0.4" />
+    </linearGradient>
+
+    <filter id="glow64">
+      <feGaussianBlur stdDeviation="0.8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Symbol for 64px -->
+  <g transform="translate(32, 32)" filter="url(#glow64)">
+    
+    <!-- Central Diamond -->
+    <path
+      d="M 0 -16 L 11 0 L 0 16 L -11 0 Z"
+      fill="url(#gold64)"
+      stroke="url(#deep64)"
+      stroke-width="0.8"
+    />
+    
+    <!-- Diamond Facets -->
+    <path d="M 0 -16 L 7 0 L 0 0 Z" fill="url(#highlight64)" opacity="0.7" />
+    <path d="M 0 -16 L -7 0 L 0 0 Z" fill="url(#deep64)" opacity="0.4" />
+    <path d="M 0 16 L 7 0 L 0 0 Z" fill="url(#deep64)" opacity="0.5" />
+    <path d="M 0 16 L -7 0 L 0 0 Z" fill="url(#deep64)" opacity="0.6" />
+
+    <!-- Left Wing -->
+    <path
+      d="M -11 0 Q -18 -5, -21 -2 Q -20 2, -11 2 Z"
+      fill="url(#gold64)"
+      stroke="url(#deep64)"
+      stroke-width="0.6"
+    />
+    <path
+      d="M -11 1 Q -16 -3, -19 -1 Q -18 1, -11 1.5 Z"
+      fill="url(#highlight64)"
+      opacity="0.5"
+    />
+
+    <!-- Right Wing -->
+    <path
+      d="M 11 0 Q 18 -5, 21 -2 Q 20 2, 11 2 Z"
+      fill="url(#gold64)"
+      stroke="url(#deep64)"
+      stroke-width="0.6"
+    />
+    <path
+      d="M 11 1 Q 16 -3, 19 -1 Q 18 1, 11 1.5 Z"
+      fill="url(#highlight64)"
+      opacity="0.5"
+    />
+
+    <!-- Top Crown -->
+    <circle cx="0" cy="-18" r="1.8" fill="url(#gold64)" />
+    
+    <!-- Sparkles -->
+    <circle cx="-8" cy="-10" r="1.2" fill="url(#highlight64)" opacity="0.9" />
+    <circle cx="8" cy="-10" r="1.2" fill="url(#highlight64)" opacity="0.9" />
+    
+    <!-- Bottom Accent -->
+    <circle cx="0" cy="18" r="1.5" fill="url(#gold64)" />
+  </g>
+</svg>

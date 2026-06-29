@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+dist/
+build/
+out/
+
+# Environment files (NEVER commit secrets!)
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Vite cache
+.vite/
+
+# TypeScript
+*.tsbuildinfo
+
+# Temp/scratch files
+*.txt
+result.txt
+horde_log.txt
+horde_result.txt
+horde_base64_result.txt
+api_result.json
+GIVA_BATCH_PROGRESS.txt
+PALMONAS_BATCH_PROGRESS.txt
