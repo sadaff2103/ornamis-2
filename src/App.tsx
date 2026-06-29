@@ -3,7 +3,6 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { IntroScreen } from "./components/IntroScreen";
 import { LayoutToggle } from "./components/LayoutToggle";
-import { GoldPricingQuickStart } from "./components/GoldPricingQuickStart";
 import { HomePage } from "./components/pages/HomePage";
 import { HomePageMinimal } from "./components/pages/HomePageMinimal";
 import { AllJewelryCatalogPage } from "./components/pages/AllJewelryCatalogPage";
@@ -388,8 +387,6 @@ function AppContent() {
               onToggle={() => setUseMinimalLayout(!useMinimalLayout)}
             />
           )}
-
-          <GoldPricingQuickStart />
         </>
       )}
 
