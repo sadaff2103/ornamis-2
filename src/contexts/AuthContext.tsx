@@ -1,3 +1,4 @@
+/* @refresh reset */
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { onAuthStateChanged, type User } from 'firebase/auth';
 import { auth } from '../lib/firebaseClient';

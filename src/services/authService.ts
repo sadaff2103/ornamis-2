@@ -144,10 +144,16 @@ async function signInWithRole(email: string, password: string, expectedRole: Use
         throw new AuthenticationError(friendlyMessage(e.code), e.code || 'SIGNIN_ERROR', err);
     }
 
-    const profile = await fetchProfile(user.uid);
+    let profile = await fetchProfile(user.uid);
     if (!profile) {
-        await firebaseSignOut(auth);
-        throw new AuthenticationError('Profile not found', 'PROFILE_NOT_FOUND');
+        // Automatically create a profile if it doesn't exist yet
+        // (Handles users created manually in Firebase Console or migrated from Supabase)
+        profile = await createProfile(
+            user.uid, 
+            user.email!, 
+            expectedRole, 
+            expectedRole === 'seller' ? 'pending' : null
+        );
     }
     if (profile.role !== expectedRole) {
         await firebaseSignOut(auth);

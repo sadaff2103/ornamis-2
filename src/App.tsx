@@ -43,6 +43,7 @@ import { ProtectedRoute } from "./components/ProtectedRoute";
 import { OAuthCallbackPage } from "./components/pages/OAuthCallbackPage";
 import { ApprovalWaitPage } from "./components/pages/ApprovalWaitPage";
 import { BookingProvider } from "./contexts/BookingContext";
+import type { UserRole } from "./lib/firebaseClient";
 
 
 type Page =
@@ -201,7 +202,7 @@ function AppContent() {
     setShowIntro(false);
   };
 
-  const handleLoginSuccess = (_email: string, role: string, sellerStatus?: string | null) => {
+  const handleLoginSuccess = (_email: string, role: UserRole, sellerStatus?: string | null) => {
     // Clear OAuth params from URL so they don't trigger re-detection on refresh
     if (window.history.replaceState) {
       window.history.replaceState({}, document.title, window.location.pathname);

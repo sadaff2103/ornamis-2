@@ -1,3 +1,4 @@
+/* @refresh reset */
 /**
  * BookingContext — provides booking state & actions to the entire app.
  *
@@ -19,7 +20,6 @@ import {
   getUserBookings,
   getAllBookings,
   releaseBooking as svcReleaseBooking,
-  getBulkBookingStatus,
   type Booking,
   type BookingItem,
 } from "../services/bookingService";
@@ -82,18 +82,6 @@ export function BookingProvider({ children }: { children: ReactNode }) {
   const refreshAllBookings = useCallback(async () => {
     const data = await getAllBookings();
     setAllBookings(data);
-  }, []);
-
-  // ── Bulk-fetch booked product IDs on mount for "Reserved" badges ───────────
-
-  const loadBookedProductIds = useCallback(async () => {
-    try {
-      const status = await getBulkBookingStatus([]);
-      // getBulkBookingStatus with empty array returns all booked products
-      setBookedProductIds(new Set(Object.keys(status).filter((k) => status[k])));
-    } catch {
-      setBookedProductIds(new Set());
-    }
   }, []);
 
   // We load booked-product IDs on mount and after every booking action
