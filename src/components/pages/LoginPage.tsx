@@ -14,7 +14,7 @@ import { signInCustomer, signInSeller, signInAdmin, sendPasswordReset, signInWit
 import type { UserRole } from "../../lib/firebaseClient";
 
 interface LoginPageProps {
-  onLoginSuccess: (email: string, role: UserRole) => void;
+  onLoginSuccess: (email: string, role: UserRole, sellerStatus?: string | null) => void;
   onNavigate: (page: string) => void;
   onBack?: () => void;
 }
@@ -54,7 +54,7 @@ export function LoginPage({ onLoginSuccess, onNavigate, onBack }: LoginPageProps
       }
 
       if (authUser) {
-        onLoginSuccess(authUser.user.email || email, authUser.profile.role);
+        onLoginSuccess(authUser.user.email || email, authUser.profile.role, authUser.profile.seller_status ?? null);
       }
     } catch (err) {
       if (err instanceof AuthenticationError) {
@@ -99,7 +99,7 @@ export function LoginPage({ onLoginSuccess, onNavigate, onBack }: LoginPageProps
     try {
       // Firebase uses a popup — returns AuthUser directly, no redirect
       const authUser = await signInWithGoogle();
-      onLoginSuccess(authUser.user.email || "", authUser.profile.role);
+      onLoginSuccess(authUser.user.email || "", authUser.profile.role, authUser.profile.seller_status ?? null);
     } catch (err) {
       setGoogleLoading(false);
       if (err instanceof AuthenticationError) {
